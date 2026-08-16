@@ -1,0 +1,10 @@
+{
+  "name": "compec-website",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "COMPEC site denemeleri. Yerel calistirma: npm start [surum] [port]",
+  "scripts": {
+    "start": "node baslat.mjs"
+  }
+}

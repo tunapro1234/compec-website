@@ -1,0 +1,13 @@
+# bagimliliklar
+node_modules/
+
+# veritabani: uye hesaplari, oturum jetonlari, oy kayitlari (IP + parmak izi)
+denemeler/*/veri
+*.db
+*.db-wal
+*.db-shm
+
+# calisma dosyalari
+*.log
+.DS_Store
+AJAN-NOTU.md

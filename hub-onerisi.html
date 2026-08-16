@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>COMPEC site tasarım denemeleri</title>
+<meta name="description" content="COMPEC web sitesi için hazırlanan tasarım adayları. Her sürümü inceleyip oy verebilirsiniz.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="/website/v2/genel/varliklar/logo/compec-mark-mavi.png">
+<link rel="stylesheet" href="/website/v2/genel/yazi.css">
+<style>
+  :root {
+    --mavi: #1A5EAA; --mavi-koyu: #164F91; --mavi-acik: #1C64B8;
+    --lacivert: #0B1B2E; --lacivert-2: #12263D;
+    --metin: #EAF0F7; --metin-2: #A3B5C9; --metin-3: #6F8299;
+    --cizgi: rgba(255,255,255,.12);
+    --sans: 'IBM Plex Sans', system-ui, sans-serif;
+    --mono: 'IBM Plex Mono', ui-monospace, monospace;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--lacivert); color: var(--metin);
+    font-family: var(--sans); font-size: 17px; line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; }
+  .kap { max-width: 1140px; margin-inline: auto; padding-inline: 28px; }
+
+  header { padding: 46px 0 34px; border-bottom: 1px solid var(--cizgi); }
+  .arma { display: flex; align-items: center; gap: 11px; margin-bottom: 26px; }
+  .arma img { height: 26px; width: auto; }
+  .arma b { font-size: 19px; letter-spacing: -.01em; }
+  h1 { font-size: clamp(28px, 4.2vw, 42px); line-height: 1.1; letter-spacing: -.022em; margin: 0; font-weight: 600; }
+  header p { margin: 16px 0 0; color: var(--metin-2); max-width: 60ch; }
+
+  .kartlar { display: grid; grid-template-columns: repeat(auto-fit, minmax(430px, 1fr)); gap: 28px; padding: 44px 0 20px; }
+  .kart { border: 1px solid var(--cizgi); border-radius: 10px; overflow: hidden; background: var(--lacivert-2); display: flex; flex-direction: column; }
+  .kart-onizleme { display: block; position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: #0A1420; border-bottom: 1px solid var(--cizgi); }
+  .kart-onizleme img { width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: transform .4s ease; }
+  .kart-onizleme:hover img { transform: scale(1.02); }
+  .kart-onizleme .ac {
+    position: absolute; inset: auto 0 0 0; padding: 30px 18px 14px;
+    background: linear-gradient(180deg, transparent, rgba(8,17,28,.92));
+    font-family: var(--mono); font-size: 12px; color: var(--metin);
+    display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  }
+  .kart-govde { padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 14px; flex: 1; }
+  .kart-bas { display: flex; align-items: baseline; gap: 10px; }
+  .kart-bas h2 { font-size: 21px; margin: 0; font-weight: 600; letter-spacing: -.015em; }
+  .kart-bas span { font-family: var(--mono); font-size: 11.5px; color: var(--metin-3); }
+  .kart-govde p { margin: 0; color: var(--metin-2); font-size: 15.5px; }
+  .ozellik { display: flex; flex-wrap: wrap; gap: 6px; }
+  .ozellik i {
+    font-style: normal; font-family: var(--mono); font-size: 11px;
+    border: 1px solid var(--cizgi); border-radius: 4px; padding: 3px 8px; color: var(--metin-3);
+  }
+  .oy-alan { margin-top: auto; padding-top: 16px; border-top: 1px solid var(--cizgi); }
+  .oy-alan .soru { font-size: 14px; color: var(--metin-3); margin-bottom: 10px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px; justify-content: center;
+    padding: 10px 18px; border-radius: 7px; border: 1px solid var(--mavi);
+    background: var(--mavi); color: #fff; text-decoration: none;
+    font-family: var(--sans); font-size: 14.5px; font-weight: 500;
+  }
+  .btn:hover { background: var(--mavi-acik); }
+
+  .aciklama { border-top: 1px solid var(--cizgi); margin-top: 34px; padding: 26px 0 60px; color: var(--metin-3); font-size: 14px; }
+  .aciklama p { margin: 0 0 10px; max-width: 78ch; }
+  .aciklama b { color: var(--metin-2); font-weight: 500; }
+  footer { border-top: 1px solid var(--cizgi); padding: 22px 0 40px; font-family: var(--mono); font-size: 12px; color: var(--metin-3); display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+
+  @media (max-width: 560px) {
+    .kap { padding-inline: 20px; }
+    .kartlar { grid-template-columns: 1fr; gap: 22px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="kap">
+    <div class="arma">
+      <img src="/website/v2/genel/varliklar/logo/compec-mark-beyaz.png" alt="">
+      <b>Compec</b>
+    </div>
+    <h1>Site tasarım denemeleri</h1>
+    <p>
+      Kulübün web sitesi için hazırlanan adaylar. Her sürüm ayrı bir tasarım yönü;
+      içerik hepsinde aynı ve yalnızca doğrulanmış bilgilerden oluşuyor.
+      Önizlemeye tıklayıp sürümü gezebilir, sonra beğenip beğenmediğinizi işaretleyebilirsiniz.
+    </p>
+  </div>
+</header>
+
+<main class="kap">
+  <div class="kartlar">
+
+    <article class="kart">
+      <a class="kart-onizleme" href="/website/v1/" target="_blank" rel="noopener">
+        <img src="/website/v2/genel/onizleme/v1.jpg" alt="Tasarım v1 ana sayfasının görünümü" loading="lazy" width="1200" height="750">
+        <span class="ac"><span>Ana sayfa görünümü</span><span>Sürümü aç &rarr;</span></span>
+      </a>
+      <div class="kart-govde">
+        <div class="kart-bas"><h2>Tasarım v1</h2><span>koyu tema</span></div>
+        <p>Koyu zeminli tek sayfa. Etkinlik arşivi, yönetim kurulu ve iş birlikleri tek akışta.</p>
+        <div class="ozellik"><i>tek sayfa</i><i>koyu tema</i><i>statik</i></div>
+        <div class="oy-alan">
+          <div class="soru">Bu tasarımı beğendiniz mi?</div>
+          <div data-compec-oy="v1"></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="kart">
+      <a class="kart-onizleme" href="/website/v2/" target="_blank" rel="noopener">
+        <img src="/website/v2/genel/onizleme/v2.jpg" alt="Tasarım v2 ana sayfasının görünümü" loading="lazy" width="1200" height="750">
+        <span class="ac"><span>Ana sayfa görünümü</span><span>Sürümü aç &rarr;</span></span>
+      </a>
+      <div class="kart-govde">
+        <div class="kart-bas"><h2>Tasarım v2</h2><span>açık tema</span></div>
+        <p>Çok sayfalı. Her etkinliğin baskı zinciri ve konuşmacı kadrosuyla ayrı sayfası, üye dizini ve üyelik hesabı var.</p>
+        <div class="ozellik"><i>çok sayfa</i><i>etkinlik arşivi</i><i>üye dizini</i><i>hesap sistemi</i></div>
+        <div class="oy-alan">
+          <div class="soru">Bu tasarımı beğendiniz mi?</div>
+          <div data-compec-oy="v2"></div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="aciklama">
+    <p>
+      <b>Oylar nasıl saklanıyor.</b> Aynı kişinin defalarca oy vermesini engellemek için
+      tarayıcınıza bir çerez kimliği bırakılır; bununla birlikte IP adresi ve cihaz
+      özellikleri (ekran boyutu, saat dilimi, tarayıcı bilgisi) kaydedilir. Oyunuzu
+      değiştirirseniz yeni kayıt eklenmez, mevcut kaydınız güncellenir.
+    </p>
+    <p>
+      <b>Bu bir çalışma sayfasıdır.</b> Buradaki sürümler kulübün resmî sitesi değildir ve
+      henüz onaylanmamıştır. Arama motorlarına kapalıdır.
+    </p>
+  </div>
+</main>
+
+<footer class="kap">
+  <span>COMPEC site çalışması</span>
+  <span>Kaynak: github.com/tunapro1234/compec-website</span>
+</footer>
+
+<script src="/website/v2/genel/oylama.js" defer></script>
+</body>
+</html>

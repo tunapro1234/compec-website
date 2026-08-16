@@ -1,0 +1,6 @@
+{
+  "baslik": "Tasarım v4",
+  "etiket": "kanıt odaklı",
+  "aciklama": "Aynı koyu mavi ama farklı iş: sitedeki her rakam kaynağıyla birlikte görünüyor. Öğrenciye kattığı değeri isim ve rakam vererek anlatıyor, doğrulayamadığı iddiaları da ayrıca listeliyor.",
+  "ozellikler": ["kanıt katmanı", "kaynaklı rakamlar", "konuşmacı arşivi", "üye dizini", "hesap sistemi"]
+}
